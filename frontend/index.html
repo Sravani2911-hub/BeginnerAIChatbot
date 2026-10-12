@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My AI Chatbot</title>
+
+    <link rel="stylesheet" href="/frontend/style.css">
+</head>
+
+<body>
+
+    <div class="chat-container">
+
+        <!-- Chat Header -->
+     <div class="chat-header">
+
+    <div>
+        <h1>🤖 My AI Chatbot</h1>
+        <p>Your AI Assistant</p>
+    </div>
+
+  <div class="header-buttons">
+
+    <button type="button" id="newChatButton">
+        New Chat
+    </button>
+
+    <button id="historyButton">
+        History
+    </button>
+
+    <button type="button" id="clearButton">
+        Clear Chat
+    </button>
+
+</div>
+
+</div>
+
+<div id="historyPanel" class="history-panel">
+
+    <h3>Chat History</h3>
+
+    <div id="historyList">
+        <p>No chat history yet.</p>
+    </div>
+
+</div> 
+
+        <!-- Chat Messages -->
+        <div class="chat-messages" id="chatMessages">
+
+            <div class="message bot-message">
+                Hello! 👋 How can I help you today?
+            </div>
+
+        </div>
+
+        <!-- Chat Input -->
+        <div class="chat-input-area">
+
+            <input
+    type="text"
+    id="message"
+    placeholder="Type your message..."
+>
+
+            <button id="sendButton">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+   <!-- loads Marked.js, which converts Markdown into formatted HTML -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+
+    <!--loads DOMPurify, which sanitizes the generated HTML for security-->
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.3.1/dist/purify.min.js"></script>
+
+<script src="/frontend/script.js"></script> 
+</body>
+
+</html>
